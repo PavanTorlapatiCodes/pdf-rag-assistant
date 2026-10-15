@@ -6,8 +6,8 @@ An interactive, AI-powered PDF Question Answering Assistant built using **Retrie
 
 - **PDF Upload:** Upload PDF documents through a simple Gradio interface.
 - **Document Processing:** Extract PDF content and split it into manageable text chunks.
-- **Semantic Retrieval:** Generate embeddings using OpenAI Embeddings and retrieve relevant content using FAISS.
-- **LLM-Powered Answers:** Use GPT-4o-mini to generate responses based on retrieved document content.
+- **Semantic Retrieval:** Generate embeddings using Hugginface Embedding and retrieve relevant content using FAISS.
+- **LLM-Powered Answers:** Use  qwen/qwen3.8-27b  to generate responses based on retrieved document content.
 - **Source-Page References:** Display the PDF page numbers associated with retrieved source documents.
 - **Interactive Interface:** Upload, process, and query documents through Gradio.
 
@@ -19,9 +19,9 @@ An interactive, AI-powered PDF Question Answering Assistant built using **Retrie
 | Gradio | User interface |
 | LangChain | RAG pipeline orchestration |
 | PyPDF | PDF document loading |
-| OpenAI Embeddings | Text vectorization |
+| Hugginface Embeddings | Text vectorization |
 | FAISS | Vector similarity search |
-| GPT-4o-mini | Answer generation |
+|qwen/qwen3.8-27b | Answer generation |
 
 ## Architecture
 
@@ -74,12 +74,12 @@ The notebook and screenshots are optional. Include them only if they are cleaned
    python -m pip install -r requirements.txt
    ```
 
-5. Configure your OpenAI API key.
+5. Configure your GROQ API key.
 
    PowerShell:
 
    ```powershell
-   $env:OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
+   $env:GROQ_API_KEY="YOUR_GROQ_API_KEY"
    ```
 
    Replace the placeholder with your own key. Do not commit API keys to GitHub.
@@ -101,7 +101,7 @@ Open the local Gradio URL displayed in your terminal.
 
 ## Retrieval Pipeline
 
-The application splits the document into chunks of 1,000 characters with a 200-character overlap. It uses OpenAI's `text-embedding-3-small` embedding model and retrieves up to five relevant chunks through FAISS. GPT-4o-mini generates the response, and the interface displays available source-page references.
+The application splits the document into chunks of 1,000 characters with a 200-character overlap. HuggingFaceEmbeddings  and retrieves up to five relevant chunks through FAISS. qwen/qwen3.8-27b generates the response, and the interface displays available source-page references.
 
 ## Current Limitations
 
