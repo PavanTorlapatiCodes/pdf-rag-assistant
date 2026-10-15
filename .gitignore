@@ -1,0 +1,31 @@
+
+# API keys and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Generated files and local vector databases
+vector_db/
+faiss_index/
+chroma_db/
+*.faiss
+*.pkl
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
